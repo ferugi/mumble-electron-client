@@ -27,7 +27,7 @@ let options = {
 rivets.components['channel-tag'] = {
     // Return the template for the component.
     template: function() {
-        return fs.readFileSync('templates/channel-tag.html', 'utf8', (err, buffer) => {  return buffer; });
+        return fs.readFileSync('views/templates/channel-tag.html', 'utf8', (err, buffer) => {  return buffer; });
     },
 
     // Takes the original element and the data that was passed into the
@@ -55,6 +55,5 @@ connectButton.addEventListener('click', () => {
             audioOutput.write(voice)
         });
 
-        
     })
 })

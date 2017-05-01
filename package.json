@@ -6,6 +6,7 @@
   "dependencies": {
     "audio-speaker": "^1.4.3",
     "irc": "^0.5.2",
+    "jquery": "^3.2.1",
     "mumble": "^0.3.11",
     "rivets": "^0.9.6",
     "speaker": "^0.3.0"
