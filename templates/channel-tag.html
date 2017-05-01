@@ -1,0 +1,9 @@
+<li>
+    <a>{ channel.name }</a>
+    <ul>
+    <li rv-each-user="channel.users">
+        <a>{ user.name }</a>
+    </li>
+    <channel-tag rv-each-channel="channel.children" channel="channel"></channel-tag>
+    </ul>
+</li>
