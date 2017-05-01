@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="node_modules/materialize/dist/css/materialize.css">
-  <link rel="stylesheet" href="assets/treeview/tree.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../node_modules/purecss/build/pure.css">
 
+  <!-- Librarys -->
   <script>
     // Required above script imports
     if (typeof module === 'object') {
@@ -17,10 +17,9 @@
     }
   </script>
 
-  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="assets/materialize/js/materialize.js"></script>
-  <script src="node_modules/sightglass/index.js"></script>
-  <script src="node_modules/rivets/dist/rivets.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/sightglass/index.js"></script>
+  <script src="../node_modules/rivets/dist/rivets.js"></script>
 
   <script>
     // Required after script imports
@@ -30,57 +29,28 @@
 
 <body>
   <div>
-      <nav class="row">
-        <div class="col s2 "><i class="material-icons left">cloud</i><span id="LogoText">Mumble</span></div>
-        <div class="col s2">
-          <input id="URL" type="url" placeholder="URL e.g. 127.0.0.1" value="127.0.0.1" />
-        </div>
-        <div class="col s2">
-          <input id="Port" type="number" placeholder="Port e.g. 64738" value="64738" />
-        </div>
-        <div class="col s2">
-          <input id="Username" type="text" placeholder="Your Username" value="TestUser" />
-        </div>
-        <div class="col s2">
-          <button class="waves-effect waves-light btn" id="ConnectButton">Connect</button>
-        </div>
-        <div class="col s2">
-          <ul class="right">
-            <li><a href="#!"><i class="material-icons">search</i></a></li>
-            <li><a href="#!"><i class="material-icons">view_module</i></a></li>
-            <li><a href="#!"><i class="material-icons">refresh</i></a></li>
-            <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
-          </ul>
-        </div>
+      <nav class="pure-g" style="background: red;">
+        <h2 class="pure-u-1-5">Test</h2>
+        <form class="pure-form pure-u-4-5">
+          <fieldset>
+            <input id="Username" type="text" placeholder="Your Username" value="TestUser" />
+            <input id="Password" type="text" placeholder="Your Password" value="" />
+            <input id="URL" type="url" placeholder="URL e.g. 127.0.0.1" value="127.0.0.1" />
+            <input id="Port" type="number" placeholder="Port e.g. 64738" value="64738" />
+            <button class="pure-button pure-button-primary" id="ConnectButton">Connect</button>
+          </fieldset>
+        </form>
       </nav>
-    <div class="row">
-      <div class="col s2">
-        <ul id="UserList" class="collection with-header">
-          <li class="collection-header">
-            <h4>Users</h4>
-          </li>
-        </ul>
+    <div class="pure-g">
+      <div class="pure-u-1-3">
       </div>
-      <div class="col s7">
-        <p><span>Ferugi: </span> How is it going?</p>
-        <div class="row">
-          <div class="card-panel blue-grey darken-1 left">
-            <span class="white-text">This is a test of a chat message.</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card-panel blue-grey darken-1 right">
-            <span class="white-text">And here's a response.</span>
-          </div>
-        </div>
-        <footer class="footer">
-          <div class="row">
-            <input id="Chat" type="text" placeholder="Chat..." />
-          </div>
+      <form class="pure-form pure-form-stacked pure-u-1-3">
+        <p>Ferugi: How is it going?</p>
+        <input class="pure-input-1" id="Chat" type="text" placeholder="Chat..." />
         </footer>
-      </div>
-      <div class="col s3">
-        <ul class="tree" id="ChannelList">
+      </form>
+      <div class="pure-u-1-3">
+        <ul class="pure-menu-list" id="ChannelList">
         </ul>
       </div>
     </div>
